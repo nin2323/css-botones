@@ -1,0 +1,136 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:black
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    all: unset; 
+    display: inline;
+}
+
+/* Modal */
+
+.modal {
+    position: absolute;
+    visibility: hidden;
+    border-radius: 16px;
+    background-color: white;
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 42px 32px;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-50px); /* Comienza desde un poco más arriba */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+}
+
+.modal.show {
+    visibility: visible; /* Se hace visible */
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Se coloca en su posición original */
+}
+
+/* Text */
+
+h3 {
+    margin: 16px 12px;
+}
+
+.modal__title {
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.modal__text {
+    font-size: 18px;
+    color: #5E2FD3;
+    font-family: 'Poppins';
+}
+
+/* Button */
+
+.button {
+    border-radius: 10px;
+    font-size: 18px;
+    font-style: normal;
+    padding: 12px 50px; 
+    background-color: #1F83FF;
+    color: white;
+    gap: 12px;
+
+    &:hover {
+        background-color: #0454b0;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: rgb(252, 217, 172);
+    }
+}
+
+
+/* Modal buttons */
+
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 12px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.button:disabled {
+    background-color: gray;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button-icon {
+    fill: white;
+}
+
+.button-secondary {
+    border-color: #1383ff;
+    background-color: white;
+    color: #1383ff;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.button-secondary.button-icon:disabled .icon{
+    fill: gray;
+}
+
+.button-secondary:disabled {
+    background-color: white;
+    border-color: gray;
+    color: gray;
+}
+
+.button-secondary.button-icon .icon {
+    fill: #1383ff;
+}
+
+.button-secondary.button-icon:hover .icon {
+    fill: white;
+}
