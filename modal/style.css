@@ -1,9 +1,17 @@
+/* General */
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color:black;
+    font-family: 'Poppins';
+}
+
+a {
+    all: unset; 
+    display: inline;
     font-family: 'Poppins';
 }
 
@@ -15,12 +23,6 @@ button {
     display: none;
 }
 
-a {
-    all: unset; 
-    display: inline;
-    font-family: 'Poppins';
-}
-
 /* Modal */
 
 .modal {
@@ -29,8 +31,6 @@ a {
     border-radius: 16px;
     background-color: white;
     text-align: center;
-    justify-content: center;
-    flex-direction: column;
     padding: 42px 32px;
     opacity: 0; 
     transform: translateY(-50px); 
@@ -43,20 +43,22 @@ a {
     transform: translateY(0); 
 }
 
-/* Text */
-
-h3 {
-    margin: 16px 12px;
-}
-
 .modal__title {
     font-size: 30px;
     font-weight: 500;
+    margin: 16px 12px;
 }
 
 .modal__text {
     font-size: 18px;
     color: #5E2FD3;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px; 
+    margin-top: 12px;
 }
 
 /* Button */
@@ -78,31 +80,6 @@ h3 {
     &:active {
         background-color: rgb(1, 32, 90);
     }
-}
-
-/* Modal buttons */
-
-.modal__buttons {
-    display: flex;
-    justify-content: center;
-    gap: 18px; 
-    margin-top: 12px;
-}
-
-.wrapper {
-    display: flex;
-    gap: 40px;
-    margin-top: 32px;
-}
-
-.button:disabled {
-    background-color: gray;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.button:hover {
-    cursor: pointer;
 }
 
 .button-secondary {
