@@ -9,6 +9,8 @@ body {
     font-family: 'Poppins';
 }
 
+.main{}
+
 a {
     all: unset; 
     display: inline;
@@ -91,3 +93,4 @@ button {
         color: white;
     }
 }
+
