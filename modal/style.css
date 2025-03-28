@@ -1,9 +1,14 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:black
+    background-color:black;
+    font-family: 'Poppins';
+}
+
+button {
+    font-family: 'Poppins';
 }
 
 .hidden {
@@ -13,6 +18,7 @@ body{
 a {
     all: unset; 
     display: inline;
+    font-family: 'Poppins';
 }
 
 /* Modal */
@@ -22,20 +28,19 @@ a {
     visibility: hidden;
     border-radius: 16px;
     background-color: white;
-    /* display: flex; */
     text-align: center;
     justify-content: center;
     flex-direction: column;
     padding: 42px 32px;
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(-50px); /* Comienza desde un poco más arriba */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+    opacity: 0; 
+    transform: translateY(-50px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .modal.show {
-    visibility: visible; /* Se hace visible */
-    opacity: 1; /* Se hace visible */
-    transform: translateY(0); /* Se coloca en su posición original */
+    visibility: visible; 
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 /* Text */
@@ -46,14 +51,12 @@ h3 {
 
 .modal__title {
     font-size: 30px;
-    font-family: 'Poppins';
     font-weight: 500;
 }
 
 .modal__text {
     font-size: 18px;
     color: #5E2FD3;
-    font-family: 'Poppins';
 }
 
 /* Button */
@@ -73,17 +76,16 @@ h3 {
     }
 
     &:active {
-        background-color: rgb(252, 217, 172);
+        background-color: rgb(1, 32, 90);
     }
 }
-
 
 /* Modal buttons */
 
 .modal__buttons {
     display: flex;
     justify-content: center;
-    gap: 10px; 
+    gap: 18px; 
     margin-top: 12px;
 }
 
@@ -103,10 +105,6 @@ h3 {
     cursor: pointer;
 }
 
-.button-icon {
-    fill: white;
-}
-
 .button-secondary {
     border-color: #1383ff;
     background-color: white;
@@ -115,22 +113,4 @@ h3 {
     &:hover {
         color: white;
     }
-}
-
-.button-secondary.button-icon:disabled .icon{
-    fill: gray;
-}
-
-.button-secondary:disabled {
-    background-color: white;
-    border-color: gray;
-    color: gray;
-}
-
-.button-secondary.button-icon .icon {
-    fill: #1383ff;
-}
-
-.button-secondary.button-icon:hover .icon {
-    fill: white;
 }
